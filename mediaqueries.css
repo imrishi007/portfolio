@@ -1,0 +1,12 @@
+/* when the size of screen is less than 1200 px the nav will disappear */
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    .menu-links {
+      max-height: 200px; /* Adjusted max-height */
+    }
+  }

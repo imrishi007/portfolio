@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Rishi Raval</title>
+  </head>
+  <body>
+    <nav class="desktop-nav">
+      <div class="logo">Rishi Raval</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="image-container">
+        <img src="./assets/dark.jpg" alt="">
+        <div class="text1">
+          <h1 id="typed-text">Heyy there!!! <br> I am Rishi Raval... I am currently pursuing my B.Tech in CSE-AIML from Adani University,Ahmedabad 😄</h1>
+          <h4 id="typed-text2"> </h4>
+          <img src="assets/down.png" style="height: 40px; width: 40px; filter: blur(0px); " alt="scroll">
+        </div>
+    </div>
+   
+    <footer>
+      <div><img src="./assets/email.png" alt="email">rishipraval@gmail.com</div>
+      <div><a href="https://github.com/imrishi007/imrishi007"><img src="./assets/github.png" alt="git">Git Hub</a></div>
+      <div><a href="https://www.adaniuni.ac.in/"><img src="./assets/education.png" alt="college">College</a></div>
+
+    </footer>
+      
+  </body>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#typed-text2",{
+      strings :["{  Scroll down to find more about me ;)  }"],
+      typeSpeed : 30,
+    })
+  </script>
+</html>
