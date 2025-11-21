@@ -9,20 +9,23 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm an introvert and logical thinker, though sometimes I can be pretty stupid. 
-              Well, more than sometimes. I'm currently pursuing B.Tech in Computer Science (AI-ML) 
-              at Adani University with a CGPA of 8.70.
+              I’m an introverted, detail-oriented person who enjoys thinking deeply and
+              approaching problems with a logical, structured mindset. I like understanding
+              how things work beneath the surface, whether it’s an algorithm, a system,
+              or a concept that needs to be broken down clearly.
             </p>
             <p>
-              I enjoy problem-solving, mathematical intuition, and breaking down complex algorithms 
-              into simple explanations. My main interests lie in DSA, core CS concepts, and the 
-              early foundations of quantitative finance.
+              My interests revolve around DSA, core computer science fundamentals, and the
+              early foundations of quantitative finance. I enjoy working on ideas that
+              challenge me intellectually and help me grow as a developer.
             </p>
             <p>
-              When I'm not coding, you'll find me watching One Piece, playing chess, following F1 
-              and football, or just vibing to music on Spotify.
+              Outside of tech, I like chess, F1 (Tu du du duu Maxx Verstappennn), football (I love ronaldo!!), music, writing, watching anime and things that keep
+              me curious and give me space to think.
             </p>
           </div>
+
+
         </div>
         
         <div className="about-stats">
