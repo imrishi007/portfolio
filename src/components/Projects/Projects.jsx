@@ -17,7 +17,7 @@ const Projects = () => {
       description: "Dual-model machine learning system combining regression for price forecasting and classification for directional movement. Custom technical indicators and feature engineering.",
       tech: ["Python", "Scikit-learn", "Pandas", "NumPy"],
       link: null,
-      github: "https://github.com/imrishi007/Stock-Price-Prediction-System"
+      github: "https://github.com/imrishi007/stock-analysis-project.git"
     },
     {
       title: "Neural Made Simple",
