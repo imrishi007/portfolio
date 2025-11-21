@@ -30,14 +30,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-xs);
   padding: var(--spacing-md) var(--spacing-lg);
   background-color: transparent;
   border-radius: 12px;
   border: 1px solid var(--border-color);
   transition: all var(--transition-normal);
-  min-width: 120px;
-  max-width: 120px;
+  width: 120px;
+  height: 100px;
   text-decoration: none;
   cursor: default;
 }
@@ -57,17 +58,10 @@ a.interest-item {
 }
 
 .interest-title {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text-primary);
   text-align: center;
-}
-
-.interest-link-text {
-  font-size: 0.8125rem;
-  color: var(--accent-secondary);
-  text-align: center;
-  font-weight: 500;
 }
 
 @media (max-width: 768px) {

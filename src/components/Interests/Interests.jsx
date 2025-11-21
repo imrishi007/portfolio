@@ -4,7 +4,7 @@ import './Interests.css';
 const Interests = () => {
   const interests = [
     {
-      title: "One Piece",
+      title: "Anime",
       icon: "🏴‍☠️"
     },
     {
@@ -13,7 +13,7 @@ const Interests = () => {
       link: "https://www.chess.com/member/imagi9e"
     },
     {
-      title: "Formula 1",
+      title: "F1",
       icon: "🏎️"
     },
     {
@@ -24,6 +24,11 @@ const Interests = () => {
       title: "Music",
       icon: "🎵",
       link: "https://open.spotify.com/user/31vd2kjzekqibcj3maqqojvsgqpy"
+    },
+    {
+      title: "Writing",
+      icon: "✍️",
+      link: "https://www.wattpad.com/story/396813666-unwritten-pages"
     }
   ];
 
@@ -46,7 +51,6 @@ const Interests = () => {
               >
                 <span className="interest-icon">{interest.icon}</span>
                 <span className="interest-title">{interest.title}</span>
-                <span className="interest-link-text">Link to profile</span>
               </a>
             ) : (
               <div key={index} className="interest-item">

@@ -30,23 +30,30 @@ const CursorEffect = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw subtle light trail
+      // Draw subtle light trail with glow
       if (trailRef.current.length > 1) {
         for (let i = 0; i < trailRef.current.length - 1; i++) {
           const point = trailRef.current[i];
           const nextPoint = trailRef.current[i + 1];
           
+          // Add glow effect
+          ctx.shadowBlur = 15;
+          ctx.shadowColor = `rgba(139, 92, 246, ${point.opacity * 0.5})`;
+          
           const gradient = ctx.createLinearGradient(point.x, point.y, nextPoint.x, nextPoint.y);
-          gradient.addColorStop(0, `rgba(139, 92, 246, ${point.opacity * 0.15})`);
-          gradient.addColorStop(1, `rgba(99, 102, 241, ${point.opacity * 0.2})`);
+          gradient.addColorStop(0, `rgba(139, 92, 246, ${point.opacity * 0.3})`);
+          gradient.addColorStop(1, `rgba(99, 102, 241, ${point.opacity * 0.4})`);
           
           ctx.strokeStyle = gradient;
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 3;
           ctx.lineCap = 'round';
           ctx.beginPath();
           ctx.moveTo(point.x, point.y);
           ctx.lineTo(nextPoint.x, nextPoint.y);
           ctx.stroke();
+          
+          // Reset shadow
+          ctx.shadowBlur = 0;
 
           // Fade out
           point.opacity *= 0.95;
