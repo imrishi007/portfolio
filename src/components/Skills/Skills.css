@@ -1,0 +1,100 @@
+.skills {
+  background-color: var(--bg-primary);
+  min-height: auto;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: 0;
+}
+
+.skill-category {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-secondary), #818CF8, #A78BFA);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--shadow-lg);
+  border-color: var(--accent-secondary);
+}
+
+.skill-category:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-category h3 {
+  font-size: 1.375rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.skill-tag {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  font-weight: 500;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+:root[data-theme=\"dark\"] .skill-tag:hover {
+  background-color: var(--bg-primary);
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .skills h2 {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .skill-category {
+    padding: var(--spacing-lg);
+  }
+}

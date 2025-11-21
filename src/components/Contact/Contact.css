@@ -1,0 +1,145 @@
+.contact {
+  background-color: var(--bg-secondary);
+  min-height: auto;
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-intro {
+  font-size: 1.0625rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.social-card {
+  background-color: var(--bg-primary);
+  padding: var(--spacing-lg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all var(--transition-normal);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent-secondary), #818CF8);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition-normal);
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--shadow-lg);
+  border-color: var(--accent-secondary);
+}
+
+.social-card:hover::before {
+  transform: scaleY(1);
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.social-info h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.social-info p {
+  font-size: 0.9375rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.resume-download {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+  transition: all var(--transition-normal);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--shadow-lg);
+}
+
+:root[data-theme="dark"] .btn-download {
+  background-color: var(--bg-primary);
+  color: var(--accent);
+}
+
+.footer {
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-xl);
+}
+
+.footer p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-intro {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: var(--spacing-md);
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+  
+  .btn-download {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+}
