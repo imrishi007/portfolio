@@ -16,7 +16,7 @@
   visibility: hidden;
   transform: translateY(20px);
   transition: all var(--transition-normal);
-  z-index: 1000;
+  z-index: 10000;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 

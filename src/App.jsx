@@ -23,19 +23,21 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <CursorEffect />
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Coding />
-      <Photography />
-      <Interests />
-      <Contact />
+    <>
+      <div className="app">
+        <CursorEffect />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Coding />
+        <Photography />
+        <Interests />
+        <Contact />
+      </div>
       <ScrollToTop />
-    </div>
+    </>
   );
 }
 
