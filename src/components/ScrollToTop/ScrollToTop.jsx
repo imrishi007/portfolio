@@ -6,13 +6,14 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 100);
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
 
-    // Check on mount
-    toggleVisibility();
-
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
@@ -24,24 +25,20 @@ const ScrollToTop = () => {
   };
 
   return (
-    <button
-      className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
-      onClick={scrollToTop}
-      aria-label="Scroll to top"
-    >
-      <svg 
-        width="20" 
-        height="20" 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round"
-      >
-        <polyline points="18 15 12 9 6 15" />
-      </svg>
-    </button>
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="scroll-to-top"
+          aria-label="Scroll to top"
+          title="Back to top"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </button>
+      )}
+    </>
   );
 };
 

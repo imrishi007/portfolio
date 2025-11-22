@@ -96,12 +96,12 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 .app {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Typography */
