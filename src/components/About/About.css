@@ -42,6 +42,8 @@
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.1s);
 }
 
 .stat-card::before {

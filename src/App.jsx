@@ -9,6 +9,7 @@ import Interests from './components/Interests/Interests';
 import Contact from './components/Contact/Contact';
 import Navbar from './components/Navbar/Navbar';
 import CursorEffect from './components/CursorEffect/CursorEffect';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -33,6 +34,7 @@ function App() {
       <Photography />
       <Interests />
       <Contact />
+      <ScrollToTop />
     </div>
   );
 }

@@ -38,8 +38,8 @@
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px var(--shadow-lg);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px var(--shadow-lg);
   border-color: var(--accent-secondary);
 }
 
