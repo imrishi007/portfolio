@@ -38,7 +38,7 @@ const About = () => {
             <p>CGPA</p>
           </div>
           <div className="stat-card">
-            <h3>3</h3>
+            <h3>4</h3>
             <p>Major Projects</p>
           </div>
         </div>

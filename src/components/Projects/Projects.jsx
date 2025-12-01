@@ -20,11 +20,19 @@ const Projects = () => {
       github: "https://github.com/imrishi007/stock-analysis-project.git"
     },
     {
-      title: "Neural Made Simple",
-      subtitle: "ML Explanation Blog",
-      description: "Educational website simplifying neural networks and ML concepts using clear, intuitive explanations. Minimal design for distraction-free learning.",
-      tech: ["React", "JavaScript", "HTML", "CSS"],
-      link: "https://neuralmadesimple.vercel.app",
+      title: "Quant Trading Backtesting",
+      subtitle: "Algorithmic Trading Strategies",
+      description: "Developed SMA, RSI, and combined strategies for backtesting on AAPL data. Evaluated returns, Sharpe ratio, and drawdowns with optimization to improve performance.",
+      tech: ["Python", "Pandas", "Matplotlib"],
+      link: "https://rishiwrites.vercel.app/blog/quant-trading-backtesting",
+      github: "https://github.com/imrishi007/Backtest1"
+    },
+    {
+      title: "RishiWrites Blog",
+      subtitle: "Personal Writing Website",
+      description: "A minimal blog website for creative and technical writing — portfolio-style articles about learning, finance, and personal thoughts.",
+      tech: ["Next.js", "React", "CSS"],
+      link: "https://rishiwrites.vercel.app",
       github: null
     }
   ];

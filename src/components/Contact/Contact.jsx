@@ -58,8 +58,8 @@ const Contact = () => {
           </div>
 
           <div className="resume-download">
-            <a href="/Resume_Main.pdf" download className="btn-download">
-              Download Resume
+            <a href="/Resume_Main.pdf" target="_blank" rel="noopener noreferrer" className="btn-download" title="Open Resume in new tab">
+              Open Resume
             </a>
           </div>
 
