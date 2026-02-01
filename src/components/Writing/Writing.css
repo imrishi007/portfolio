@@ -1,0 +1,172 @@
+/* ===== PREMIUM WRITING SECTION ===== */
+.writing {
+  background: var(--bg-secondary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.writing .section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.writing .section-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.15), rgba(245, 87, 108, 0.15));
+  border-radius: var(--border-radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f093fb;
+  margin-bottom: var(--spacing-md);
+}
+
+:root[data-theme="light"] .writing .section-tag {
+  color: #c047d6;
+}
+
+/* Grid */
+.writing-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Writing Card */
+.writing-card {
+  position: relative;
+  padding: var(--spacing-xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(240, 147, 251, 0.1), transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.writing-card:hover .card-glow {
+  opacity: 1;
+}
+
+.writing-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(240, 147, 251, 0.3);
+}
+
+/* Large Card */
+.writing-card.large {
+  grid-row: span 1;
+}
+
+.writing-card.large .writing-icon {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+}
+
+/* Content */
+.writing-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.writing-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--border-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+  width: fit-content;
+}
+
+.writing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.02em;
+}
+
+.writing-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+/* Link */
+.writing-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.writing-card:hover .writing-link {
+  color: #f093fb;
+}
+
+.writing-link svg {
+  transition: transform var(--transition-fast);
+}
+
+.writing-card:hover .writing-link svg {
+  transform: translate(3px, -3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .writing {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .writing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .writing-card {
+    padding: var(--spacing-lg);
+  }
+
+  .writing-card.large .writing-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 2.5rem;
+  }
+
+  .writing-card h3 {
+    font-size: 1.25rem;
+  }
+}

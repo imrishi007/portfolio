@@ -4,46 +4,79 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: "Pulse",
+      subtitle: "Financial News Platform",
+      description: "Real time financial news aggregator consolidating 25+ sources. Features interactive news reels and market data visualization.",
+      tech: ["React", "Firebase", "Python"],
+      link: null,
+      github: "https://github.com/imrishi007/pulse-main"
+    },
+    {
+      title: "Financial Document Analysis",
+      subtitle: "Deep Learning Sentiment",
+      description: "Deep learning pipeline for analyzing financial documents. Classifies SEC filings by sentiment, risk level, and market outlook.",
+      tech: ["Python", "Deep Learning", "NLP"],
+      link: null,
+      github: "https://github.com/imrishi007/financial-document-analysis"
+    },
+    {
+      title: "Impulse",
+      subtitle: "AI Trading System",
+      description: "Trading system combining AI learning with human oversight. Features autonomous strategy generation and backtesting.",
+      tech: ["Python", "Machine Learning"],
+      link: null,
+      github: "https://github.com/imrishi007/Impulse"
+    },
+    {
       title: "Recursify",
-      subtitle: "DSA Explanation Blog",
-      description: "A complete blog platform explaining 415+ LeetCode problems with clear intuition and pattern-based learning. Features multi-language code blocks, bookmarking, and progress tracking.",
-      tech: ["React", "JavaScript", "Vite", "Prism.js"],
+      subtitle: "DSA Blog",
+      description: "Interactive platform explaining 550+ LeetCode problems with pattern based learning and syntax highlighting.",
+      tech: ["React", "JavaScript", "Vite"],
       link: "https://recursify.vercel.app",
       github: "https://github.com/imrishi007/recursify"
     },
     {
       title: "Stock Price Prediction",
-      subtitle: "ML System",
-      description: "Dual-model machine learning system combining regression for price forecasting and classification for directional movement. Custom technical indicators and feature engineering.",
-      tech: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+      subtitle: "ML Forecasting",
+      description: "ML system combining regression for price forecasting and classification for directional movement.",
+      tech: ["Python", "Scikit-learn", "Pandas"],
       link: null,
       github: "https://github.com/imrishi007/stock-analysis-project.git"
     },
     {
       title: "Quant Trading Backtesting",
-      subtitle: "Algorithmic Trading Strategies",
-      description: "Developed SMA, RSI, and combined strategies for backtesting on AAPL data. Evaluated returns, Sharpe ratio, and drawdowns with optimization to improve performance.",
+      subtitle: "Algorithmic Strategies",
+      description: "SMA, RSI, and combined strategies for backtesting. Evaluated Sharpe ratio, returns, and drawdowns.",
       tech: ["Python", "Pandas", "Matplotlib"],
       link: "https://rishiwrites.vercel.app/blog/quant-trading-backtesting",
       github: "https://github.com/imrishi007/Backtest1"
     },
     {
-      title: "RishiWrites Blog",
-      subtitle: "Personal Writing Website",
-      description: "A minimal blog website for creative and technical writing — portfolio-style articles about learning, finance, and personal thoughts.",
+      title: "RishiWrites",
+      subtitle: "Personal Blog",
+      description: "Minimal blog for creative and technical writing. Articles about quantitative finance and learning.",
       tech: ["Next.js", "React", "CSS"],
       link: "https://rishiwrites.vercel.app",
-      github: null
+      github: "https://github.com/imrishi007/rishi_writes"
     }
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>Projects</h2>
+        <div className="section-header animate-on-scroll">
+          <h2>Projects</h2>
+          <p className="section-subtitle">
+            Things I've built.
+          </p>
+        </div>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div
+              key={index}
+              className="project-card animate-on-scroll"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="project-header">
                 <h3>{project.title}</h3>
                 <p className="project-subtitle">{project.subtitle}</p>
@@ -57,12 +90,18 @@ const Projects = () => {
               <div className="project-links">
                 {project.link && (
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                    Live Site →
+                    <span>Live</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
                   </a>
                 )}
                 {project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                    GitHub →
+                    <span>GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
                   </a>
                 )}
               </div>

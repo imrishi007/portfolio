@@ -4,42 +4,47 @@ import './About.css';
 const About = () => {
   return (
     <section id="about" className="about">
+      <div className="about-bg">
+        <div className="about-gradient"></div>
+      </div>
+
       <div className="container">
-        <h2>About Me</h2>
-        <div className="about-content">
-          <div className="about-text">
-            <p>
-              I’m an introverted, detail-oriented person who enjoys thinking deeply and
-              approaching problems with a logical, structured mindset. I like understanding
-              how things work beneath the surface, whether it’s an algorithm, a system,
-              or a concept that needs to be broken down clearly.
+        <div className="about-grid">
+          <div className="about-content animate-on-scroll">
+            <span className="section-tag">About</span>
+            <h2>Driven by curiosity,<br /><span className="gradient-text">powered by code.</span></h2>
+            <p className="about-lead">
+              Computer Science student at Adani University with a passion for
+              technology and finance.
             </p>
             <p>
-              My interests revolve around DSA, core computer science fundamentals, and the
-              early foundations of quantitative finance. I enjoy working on ideas that
-              challenge me intellectually and help me grow as a developer.
+              I approach problems with a logical mindset, breaking them down into
+              clear steps. My work spans quantitative finance research to building
+              full stack applications.
             </p>
             <p>
-              Outside of tech, I like chess, F1 (Tu du du duu Maxx Verstappennn), football (I love ronaldo!!), music, writing, watching anime and things that keep
-              me curious and give me space to think.
+              I believe in learning by doing. Always looking for opportunities
+              to blend technical skills with finance and entrepreneurship.
             </p>
           </div>
 
-
-        </div>
-        
-        <div className="about-stats">
-          <div className="stat-card">
-            <h3>415+</h3>
-            <p>LeetCode Problems</p>
-          </div>
-          <div className="stat-card">
-            <h3>8.70</h3>
-            <p>CGPA</p>
-          </div>
-          <div className="stat-card">
-            <h3>4</h3>
-            <p>Major Projects</p>
+          <div className="about-cards animate-on-scroll">
+            <div className="about-card">
+              <h3>Finance Focus</h3>
+              <p>Quantitative research, trading strategies, financial analysis</p>
+            </div>
+            <div className="about-card">
+              <h3>Fast Learner</h3>
+              <p>Quick to pick up new technologies and apply them</p>
+            </div>
+            <div className="about-card">
+              <h3>Problem Solver</h3>
+              <p>550+ LeetCode problems with focus on optimization</p>
+            </div>
+            <div className="about-card">
+              <h3>Builder</h3>
+              <p>7+ projects shipped from ideation to deployment</p>
+            </div>
           </div>
         </div>
       </div>
