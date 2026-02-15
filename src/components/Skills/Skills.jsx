@@ -1,41 +1,46 @@
-import React from 'react';
+﻿import React from 'react';
 import './Skills.css';
 
 const Skills = () => {
-  const skills = {
-    "Languages": ["Python", "Java", "C/C++", "JavaScript", "SQL", "HTML/CSS"],
-    "Libraries & Frameworks": ["React", "Next.js", "NumPy", "Pandas", "Scikit-learn", "TensorFlow"],
-    "Tools & Platforms": ["Git", "Linux", "Firebase", "VS Code", "Jupyter", "Vite"],
-    "Competencies": ["Algorithms", "Data Analysis", "Financial Modeling", "Backtesting", "Statistics"]
-  };
+  const categories = [
+    {
+      label: 'Languages',
+      items: ['C++', 'Python', 'SQL', 'JavaScript', 'Java'],
+    },
+    {
+      label: 'Quant / Math',
+      items: ['Black-Scholes', 'Stochastic Calculus', 'Time Series Analysis', 'Statistics', 'Financial Modeling', 'Backtesting'],
+    },
+    {
+      label: 'ML / Data',
+      items: ['Scikit-learn', 'TensorFlow', 'Pandas', 'NumPy', 'NLP'],
+    },
+    {
+      label: 'Tools',
+      items: ['Linux', 'Git', 'Docker', 'Jupyter', 'VS Code'],
+    },
+    {
+      label: 'Web (Secondary)',
+      items: ['React', 'Next.js', 'Firebase', 'Vite'],
+    },
+  ];
 
   return (
-    <section id="skills" className="skills">
-      <div className="container">
-        <div className="section-header animate-on-scroll">
-          <span className="section-tag">Skills</span>
-          <h2>Tech Stack</h2>
-          <p className="section-subtitle">
-            Tools and technologies I use.
-          </p>
-        </div>
+    <section id="skills">
+      <p className="section-label">Skills</p>
+      <h2>Technical Proficiency</h2>
 
-        <div className="skills-grid">
-          {Object.entries(skills).map(([category, items], index) => (
-            <div
-              key={category}
-              className="skill-category animate-on-scroll"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <h3>{category}</h3>
-              <div className="skill-items">
-                {items.map((skill, i) => (
-                  <span key={i} className="skill-tag">{skill}</span>
-                ))}
-              </div>
+      <div className="skills-list">
+        {categories.map((cat, i) => (
+          <div key={i} className="skill-row">
+            <span className="skill-category-label mono">{cat.label}</span>
+            <div className="skill-items">
+              {cat.items.map((item, j) => (
+                <span key={j} className="skill-item">{item}</span>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
